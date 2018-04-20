@@ -1,0 +1,31 @@
+﻿@model CardMaker.Models.CardBusiness
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Generate a card</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+</head>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@using (Html.BeginForm())
+{
+    <p> </p>
+    <p>
+        Sender: @Html.TextBoxFor(t => t.Sender,
+    new { @class = "form-control", maxlength = 30, style = "width:200px;" })
+    </p>
+
+    <p>Recipient: @Html.TextBoxFor(t => t.Recipient,
+                 new { @class = "form-control", maxlength = 30, style = "width:200px;" })
+    </p>
+
+    <p>Message: @Html.TextBoxFor(t => t.Message,
+                new { @class = "form-control", maxlength = 30, style = "width:200px;" })
+    </p>
+
+   <button class="btn btn-primary" type="submit">Make Card</button>
+
+}
