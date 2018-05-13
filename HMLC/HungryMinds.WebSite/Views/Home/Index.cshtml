@@ -1,0 +1,36 @@
+﻿@model HungryMinds.WebSite.Models.IndexModel
+@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <h1>Hungry Minds Learning Center</h1>
+    <p class="lead">Where the mind comes to chow down</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4 ">
+        <h2 class="text-primary">Class List</h2>
+        <p> See our class offerings</p>
+        <a href="@Url.Action( "CourseListings", "Home")" class="btn btn-primary btn-primary">
+            Go &raquo;
+
+        </a>
+    </div>
+    <div class="col-md-4">
+        <h2 class="text-primary">Your enrolled classes</h2>
+        <p>See the classes you are enrolled in.</p>
+        <a href="@Url.Action( "EnrollInCourse", "Home")" class="btn btn-primary btn-primary">
+            Go &raquo;
+        </a>
+    </div>
+    <div class="col-md-4">
+        <h2 class="text-primary">Enroll in a class</h2>
+        <p>Take a new class.</p>
+        <a href="@Url.Action( "Index", "ClassMasters")" class="btn btn-primary btn-primary">
+            Go &raquo;
+        </a>
+    </div>
+</div>
